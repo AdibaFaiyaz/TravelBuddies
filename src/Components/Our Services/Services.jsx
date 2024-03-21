@@ -17,7 +17,7 @@ function Services() {
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       
       <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="carpooling1.jpg" alt="Carpooling Service 1" class="w-full h-56 object-cover object-center"/>
+        <img src="https://media.istockphoto.com/id/1394307503/photo/a-coffee-break-on-avenida-paulista.jpg?s=612x612&w=0&k=20&c=b1fRde7euHMkxgWQGY55-_jiPPDEmGHkvPOO1nGRM48=" alt="Carpooling Service 1" class="w-full h-56 object-cover object-center"/>
         <div class="p-6">
           <h3 class="text-xl font-semibold mb-2">Daily Commute</h3>
           <p class="text-gray-700">Find and share rides for your daily work commute.</p>
@@ -26,7 +26,7 @@ function Services() {
 
      
       <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="carpooling2.jpg" alt="Carpooling Service 2" class="w-full h-56 object-cover object-center"/>
+        <img src="https://media.istockphoto.com/id/1459004747/photo/a-road-that-stretches-far-ahead.jpg?s=612x612&w=0&k=20&c=sjbEsVAj8z02AGRRtNT7nHkdhfKYaTs1M_SN25NGO9g=" alt="Carpooling Service 2" class="w-full h-56 object-cover object-center"/>
         <div class="p-6">
           <h3 class="text-xl font-semibold mb-2">Long Distance Travel</h3>
           <p class="text-gray-700">Share rides for long-distance trips with fellow travelers.</p>
@@ -35,7 +35,7 @@ function Services() {
 
      
       <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="carpooling3.jpg" alt="Carpooling Service 3" class="w-full h-56 object-cover object-center"/>
+        <img src="https://i0.wp.com/blog.10times.com/wp-content/uploads/2023/06/event-transportation-chicago.webp?fit=612%2C408&ssl=1" alt="Carpooling Service 3" class="w-full h-56 object-cover object-center"/>
         <div class="p-6">
           <h3 class="text-xl font-semibold mb-2">Event Transportation</h3>
           <p class="text-gray-700">Carpool to events, concerts, or sports games with ease.</p>

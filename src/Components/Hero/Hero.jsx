@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Hero() {
   return (
@@ -15,7 +16,7 @@ function Hero() {
             <p className="text-lg mb-8">Join our community of carpoolers and save money while helping the environment.</p>
           </div>
           <div className="w-full lg:w-1/2">
-            <img src="https://img.freepik.com/free-vector/classic-orange-car-vector-illustration_1308-164330.jpg?t=st=1710438653~exp=1710442253~hmac=48c83f12ef12d646fc32b6e62165ee3e11c192ef44cf165eb17e9aaffd6da7e2&w=1060" alt="Car" className="w-3/4 h-auto object-cover rounded-lg shadow-lg justify-end flex" />
+            <img src="https://img.freepik.com/free-vector/classic-orange-car-vector-illustration_1308-164330.jpg?t=st=1710438653~exp=1710442253~hmac=48c83f12ef12d646fc32b6e62165ee3e11c192ef44cf165eb17e9aaffd6da7e2&w=1060" alt="Car" className="w-3/4 h-auto object-cover rounded-lg justify-end flex" />
           </div>
         </div>
       </section>
@@ -25,13 +26,17 @@ function Hero() {
           <h2 className="text-3xl font-bold text-center mb-8">How it Works</h2>
           <div className="flex flex-wrap justify-center items-center">
             <div className="w-full sm:w-1/2 lg:w-1/4 p-4">
+            <Link to="/Signup">
               <div className="bg-white rounded-lg shadow-lg p-6 text-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto mb-4 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M1 4a1 1 0 0 1 1-1h16a1 1 0 0 1 0 2H2a1 1 0 0 1-1-1zM3 8a1 1 0 0 1 0-2h14a1 1 0 0 1 0 2H3zm-1 5a1 1 0 0 1 1-1h16a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1zm15-4a1 1 0 0 1-1 1H5a1 1 0 1 1 0-2h12a1 1 0 0 1 1 1z" clipRule="evenodd" />
                 </svg>
+                
                 <h3 className="text-xl font-bold mb-2">Sign Up</h3>
+                
                 <p className="text-gray-700">Create an account with us for free.</p>
               </div>
+              </Link>
             </div>
             <div className="w-full sm:w-1/2 lg:w-1/4 p-4">
               <div className="bg-white rounded-lg shadow-lg p-6 text-center">
