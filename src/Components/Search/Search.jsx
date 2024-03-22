@@ -5,7 +5,7 @@ function Search() {
     <>
     <body class="bg-gray-100">
   <div class="max-w-4xl mx-auto py-8 px-4">
-    <h1 class="text-3xl font-semibold text-center mb-8">Carpooling - Find Rides or Offer Your Own</h1>
+    <h1 class="text-3xl font-semibold text-center mb-8">TravelBuddies - Find Rides or Offer Your Own</h1>
     
     <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
       <h2 class="text-xl font-semibold mb-4">Search for Rides</h2>

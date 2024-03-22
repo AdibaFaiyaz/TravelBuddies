@@ -3,16 +3,12 @@ import React from 'react'
 function About() {
   return (
     <>
-    <header class="bg-purple-600 text-white py-4">
-        <div class="container mx-auto px-4">
-            <h1 class="text-2xl font-bold">Carpooling</h1>
-        </div>
-    </header>
+    
     <main class="container mx-auto py-8 px-4">
         <div class="max-w-3xl mx-auto">
             <h2 class="text-3xl font-bold mb-4">About Us</h2>
             <p class="text-lg leading-relaxed mb-6">
-                At Carpooling, we believe in the power of shared transportation. Our mission is to provide an
+                At TravelBuddies, we believe in the power of shared transportation. Our mission is to provide an
                 eco-friendly and cost-effective solution for commuters. By connecting drivers with passengers, we
                 facilitate efficient use of vehicles, reduce traffic congestion, and contribute to a greener environment.
             </p>

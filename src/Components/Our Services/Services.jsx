@@ -3,13 +3,6 @@ import React from 'react'
 function Services() {
   return (
     <>
-    <header class="bg-purple-600 text-white py-4">
-    <div class="container mx-auto px-4">
-      <h1 class="text-2xl font-bold">Travel Buddies</h1>
-    </div>
-  </header>
-
-  
   <main class="container mx-auto py-8 px-4">
     <h2 class="text-3xl font-bold mb-4">Our Carpooling Services</h2>
 
