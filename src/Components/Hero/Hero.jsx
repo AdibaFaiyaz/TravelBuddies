@@ -39,6 +39,7 @@ function Hero() {
               </Link>
             </div>
             <div className="w-full sm:w-1/2 lg:w-1/4 p-4">
+              <Link to="/Search">
               <div className="bg-white rounded-lg shadow-lg p-6 text-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto mb-4 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 2a1 1 0 0 1 1 1v1.586l1.707-1.707a1 1 0 1 1 1.414 1.414L11.414 6l1.707 1.707a1 1 0 1 1-1.414 1.414L10 8.414l-1.707 1.707a1 1 0 1 1-1.414-1.414L8.586 7 6.879 5.293A1 1 0 0 1 8.293 3.88L10 5.586V4a1 1 0 0 1 1-1z" clipRule="evenodd" />
@@ -49,6 +50,7 @@ function Hero() {
                 <h3 className="text-xl font-bold mb-2">Search</h3>
                 <p className="text-gray-700">Find available rides or offer your own.</p>
               </div>
+              </Link>
             </div>
             <div className="w-full sm:w-1/2 lg:w-1/4 p-4">
               <div className="bg-white rounded-lg shadow-lg p-6 text-center">
@@ -62,6 +64,7 @@ function Hero() {
               </div>
             </div>
             <div className="w-full sm:w-1/2 lg:w-1/4 p-4">
+              <Link to="/Rate">
               <div className="bg-white rounded-lg shadow-lg p-6 text-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto mb-4 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 2a1 1 0 0 1 1 1v1.586l1.707-1.707a1 1 0 1 1 1.414 1.414L11.414 6l1.707 1.707a1 1 0 1 1-1.414 1.414L10 7.414V9a1 1 0 0 1-2 0V6a1 1 0 0 1 1-1z" clipRule="evenodd" />
@@ -71,6 +74,7 @@ function Hero() {
                 <h3 className="text-xl font-bold mb-2">Rate</h3>
                 <p className="text-gray-700">Rate your travel companions and leave feedback.</p>
               </div>
+              </Link>
             </div>
           </div>
         </div>

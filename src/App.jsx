@@ -8,7 +8,8 @@ import About from './Components/About/About';
 import Contact from './Components/Contact/Contact';
 import Signup from './Components/Signup/Signup';
 import Login from './Components/Login/Login';
-
+import Search from './Components/Search/Search';
+import Rate from './Components/Rate/Rate';
 
 function App() {
   
@@ -26,6 +27,8 @@ function App() {
           <Route path="/Contact" element={<Contact/>}/>
           <Route path="/Signup" element={<Signup/>}/>
           <Route path="/Login" element={<Login/>}/>
+          <Route path="/Search" element={<Search/>}/>
+          <Route path="/Rate" element={<Rate/>}/>
         </Routes>
       </HashRouter>
     </div>
