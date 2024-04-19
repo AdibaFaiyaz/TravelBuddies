@@ -12,8 +12,6 @@ import Search from './Components/Search/Search';
 import Rate from './Components/Rate/Rate';
 
 function App() {
-  
-
   return (
     <>
      <div>
