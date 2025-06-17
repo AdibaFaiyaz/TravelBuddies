@@ -1,86 +1,191 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Hero() {
+const Hero = () => {
+  const benefits = [
+    {
+      icon: '💰',
+      title: 'Save Money',
+      description: 'Split fuel costs and save up to 60% on commuting expenses'
+    },
+    {
+      icon: '🌱',
+      title: 'Reduce Emissions',
+      description: 'Help reduce traffic and carbon footprint together'
+    },
+    {
+      icon: '⏰',
+      title: 'Never Be Late',
+      description: 'Reliable rides with verified community members'
+    },
+    {
+      icon: '🤝',
+      title: 'Meet People',
+      description: 'Connect with colleagues and neighbors on your route'
+    }
+  ];
+
+  const stats = [
+    { number: '50K+', label: 'Active Users' },
+    { number: '2M+', label: 'Rides Shared' },
+    { number: '80%', label: 'Cost Savings' },
+    { number: '4.9★', label: 'User Rating' }
+  ];
+
   return (
-    <>
-      <header className="bg-white shadow">
-        <div className="container mx-auto py-4 px-4">
-          <h1 className="text-2xl font-bold text-gray-800">TravelBuddies</h1>
-        </div>
-      </header>
-      <section className="text-vlack py-16">
-        <div className="container mx-auto px-4 flex flex-row">
-          <div>
-            <h2 className="text-4xl font-bold mb-4">Share a ride, share the cost!</h2>
-            <p className="text-lg mb-8">Join our community of carpoolers and save money while helping the environment.</p>
+    <div className="min-h-screen bg-gradient-subtle">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden pt-16 pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-neutral-900 mb-6 leading-tight">
+              Smart Carpooling for
+              <span className="block bg-gradient-primary bg-clip-text text-transparent">
+                Modern Commuters
+              </span>
+            </h1>
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+              Join thousands of commuters who save money, reduce stress, and never worry about being late. 
+              Find reliable ride partners on your route today.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+              <Link
+                to="/search"
+                className="bg-gradient-primary text-white px-8 py-4 rounded-xl text-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
+                🔍 Find a Ride
+              </Link>
+              <Link
+                to="/search"
+                className="border-2 border-primary-500 text-primary-600 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-primary-50 transition-all duration-300"
+              >
+                🚗 Offer a Ride
+              </Link>
+            </div>
           </div>
-          <div className="w-full lg:w-1/2">
-            <img src="https://img.freepik.com/free-vector/classic-orange-car-vector-illustration_1308-164330.jpg?t=st=1710438653~exp=1710442253~hmac=48c83f12ef12d646fc32b6e62165ee3e11c192ef44cf165eb17e9aaffd6da7e2&w=1060" alt="Car" className="w-3/4 h-auto object-cover rounded-lg justify-end flex" />
+
+          {/* Quick Search Bar */}
+          <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-6 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-neutral-700">From</label>
+                <input
+                  type="text"
+                  placeholder="Enter pickup location"
+                  className="w-full px-4 py-3 border border-neutral-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-neutral-700">To</label>
+                <input
+                  type="text"
+                  placeholder="Enter destination"
+                  className="w-full px-4 py-3 border border-neutral-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-neutral-700">Date</label>
+                <input
+                  type="date"
+                  className="w-full px-4 py-3 border border-neutral-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                />
+              </div>
+              <div className="flex items-end">
+                <button className="w-full bg-gradient-primary text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-200">
+                  Search Rides
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">How it Works</h2>
-          <div className="flex flex-wrap justify-center items-center">
-            <div className="w-full sm:w-1/2 lg:w-1/4 p-4">
-            <Link to="/Signup">
-              <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto mb-4 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M1 4a1 1 0 0 1 1-1h16a1 1 0 0 1 0 2H2a1 1 0 0 1-1-1zM3 8a1 1 0 0 1 0-2h14a1 1 0 0 1 0 2H3zm-1 5a1 1 0 0 1 1-1h16a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1zm15-4a1 1 0 0 1-1 1H5a1 1 0 1 1 0-2h12a1 1 0 0 1 1 1z" clipRule="evenodd" />
-                </svg>
-                
-                <h3 className="text-xl font-bold mb-2">Sign Up</h3>
-                
-                <p className="text-gray-700">Create an account with us for free.</p>
+      {/* Benefits Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-neutral-900 mb-4">Why Choose RideShare?</h2>
+            <p className="text-lg text-neutral-600">Experience the benefits of smart carpooling</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center group">
+                <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center text-2xl mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-neutral-900 mb-2">{benefit.title}</h3>
+                <p className="text-neutral-600">{benefit.description}</p>
               </div>
-              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 bg-neutral-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl font-bold text-primary-600 mb-2">{stat.number}</div>
+                <div className="text-neutral-600 font-medium">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-neutral-900 mb-4">How It Works</h2>
+            <p className="text-lg text-neutral-600">Get started in just 3 simple steps</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-primary-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                1
+              </div>
+              <h3 className="text-xl font-semibold text-neutral-900 mb-2">Sign Up</h3>
+              <p className="text-neutral-600">Create your profile and verify your identity for a safe community</p>
             </div>
-            <div className="w-full sm:w-1/2 lg:w-1/4 p-4">
-              <Link to="/Search">
-              <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto mb-4 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 2a1 1 0 0 1 1 1v1.586l1.707-1.707a1 1 0 1 1 1.414 1.414L11.414 6l1.707 1.707a1 1 0 1 1-1.414 1.414L10 8.414l-1.707 1.707a1 1 0 1 1-1.414-1.414L8.586 7 6.879 5.293A1 1 0 0 1 8.293 3.88L10 5.586V4a1 1 0 0 1 1-1z" clipRule="evenodd" />
-                  <path fillRule="evenodd" d="M4 10a1 1 0 0 1 1-1h1.586l-1.707-1.707a1 1 0 1 1 1.414-1.414L6 8.586l1.707-1.707a1 1 0 1 1 1.414 1.414L7.414 10l1.707 1.707a1 1 0 1 1-1.414 1.414L7 11.414V13a1 1 0 0 1-2 0V8a1 1 0 0 1 1-1z" clipRule="evenodd" />
-                  <path fillRule="evenodd" d="M14 10a1 1 0 0 1-1 1h-1.586l1.707 1.707a1 1 0 1 1-1.414 1.414L14 13.414l-1.707 1.707a1 1 0 1 1-1.414-1.414L12.586 11l-1.707-1.707a1 1 0 1 1 1.414-1.414L13 9.586V8a1 1 0 0 1 2 0v5a1 1 0 0 1-1 1z" clipRule="evenodd" />
-                  <path fillRule="evenodd" d="M16 15a1 1 0 0 1-1 1h-1.586l1.707 1.707a1 1 0 1 1-1.414 1.414L16 18.414l-1.707 1.707a1 1 0 1 1-1.414-1.414L14.586 16l-1.707-1.707a1 1 0 1 1 1.414-1.414L15 14.586V13a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1z" clipRule="evenodd" />
-                </svg>
-                <h3 className="text-xl font-bold mb-2">Search</h3>
-                <p className="text-gray-700">Find available rides or offer your own.</p>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-primary-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                2
               </div>
-              </Link>
+              <h3 className="text-xl font-semibold text-neutral-900 mb-2">Find Matches</h3>
+              <p className="text-neutral-600">Search for rides on your route or offer seats in your car</p>
             </div>
-            <div className="w-full sm:w-1/2 lg:w-1/4 p-4">
-              <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto mb-4 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M13 2a1 1 0 0 1 1 1v1.586l1.707-1.707a1 1 0 1 1 1.414 1.414L14.414 6l1.707 1.707a1 1 0 1 1-1.414 1.414L13 7.414V9a1 1 0 0 1-2 0V6a1 1 0 0 1 1-1z" clipRule="evenodd" />
-                  <path fillRule="evenodd" d="M7 10a1 1 0 0 1 1-1h1.586l-1.707-1.707a1 1 0 1 1 1.414-1.414L10 8.586l1.707-1.707a1 1 0 1 1 1.414 1.414L11.414 9l1.707 1.707a1 1 0 1 1-1.414 1.414L10 10.414V12a1 1 0 0 1-2 0V9z" clipRule="evenodd" />
-                  <path fillRule="evenodd" d="M3 14a1 1 0 0 1 0-2h1.586l-1.707-1.707a1 1 0 1 1 1.414-1.414L4 11.586l1.707-1.707a1 1 0 1 1 1.414 1.414L5.414 13l1.707 1.707a1 1 0 1 1-1.414 1.414L3 14.414V16a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1z" clipRule="evenodd" />
-                </svg>
-                <h3 className="text-xl font-bold mb-2">Ride</h3>
-                <p className="text-gray-700">Enjoy your journey with fellow travelers.</p>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-primary-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                3
               </div>
-            </div>
-            <div className="w-full sm:w-1/2 lg:w-1/4 p-4">
-              <Link to="/Rate">
-              <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto mb-4 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 2a1 1 0 0 1 1 1v1.586l1.707-1.707a1 1 0 1 1 1.414 1.414L11.414 6l1.707 1.707a1 1 0 1 1-1.414 1.414L10 7.414V9a1 1 0 0 1-2 0V6a1 1 0 0 1 1-1z" clipRule="evenodd" />
-                  <path fillRule="evenodd" d="M7 10a1 1 0 0 1 1-1h1.586l-1.707-1.707a1 1 0 1 1 1.414-1.414L10 8.586l1.707-1.707a1 1 0 1 1 1.414 1.414L11.414 9l1.707 1.707a1 1 0 1 1-1.414 1.414L10 10.414V12a1 1 0 0 1-2 0V9z" clipRule="evenodd" />
-                  <path fillRule="evenodd" d="M3 14a1 1 0 0 1 0-2h1.586l-1.707-1.707a1 1 0 1 1 1.414-1.414L4 11.586l1.707-1.707a1 1 0 1 1 1.414 1.414L5.414 13l1.707 1.707a1 1 0 1 1-1.414 1.414L3 14.414V16a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1z" clipRule="evenodd" />
-                </svg>
-                <h3 className="text-xl font-bold mb-2">Rate</h3>
-                <p className="text-gray-700">Rate your travel companions and leave feedback.</p>
-              </div>
-              </Link>
+              <h3 className="text-xl font-semibold text-neutral-900 mb-2">Ride Together</h3>
+              <p className="text-neutral-600">Connect, coordinate, and enjoy your stress-free commute</p>
             </div>
           </div>
         </div>
       </section>
-    </>
-  )
-}
 
-export default Hero
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-primary">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Commute?</h2>
+          <p className="text-xl text-white/90 mb-8">Join our community and start saving money while helping the environment</p>
+          <Link
+            to="/signup"
+            className="bg-white text-primary-600 px-8 py-4 rounded-xl text-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+          >
+            Get Started for Free
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Hero;

@@ -1,39 +1,324 @@
-import React from 'react'
+import React from 'react';
 
-function Vehicles() {
+const Vehicles = () => {
+  const vehicleCategories = [
+    {
+      id: 1,
+      name: "Compact Cars",
+      description: "Perfect for city commuting and short distances",
+      examples: ["Honda Civic", "Toyota Corolla", "Nissan Sentra"],
+      capacity: "2-4 passengers",
+      features: ["Fuel efficient", "Easy parking", "Lower costs"],
+      icon: "🚗",
+      color: "bg-blue-50 border-blue-200",
+      idealFor: "Daily commutes, city travel"
+    },
+    {
+      id: 2,
+      name: "Sedans",
+      description: "Comfortable rides for medium to long distances",
+      examples: ["Honda Accord", "Toyota Camry", "Hyundai Sonata"],
+      capacity: "3-5 passengers",
+      features: ["Comfortable seating", "Spacious interior", "Smooth ride"],
+      icon: "🚙",
+      color: "bg-green-50 border-green-200",
+      idealFor: "Longer commutes, airport trips"
+    },
+    {
+      id: 3,
+      name: "SUVs",
+      description: "Spacious vehicles perfect for groups and luggage",
+      examples: ["Honda CR-V", "Toyota RAV4", "Ford Explorer"],
+      capacity: "4-7 passengers",
+      features: ["Extra luggage space", "Higher seating", "All-weather capable"],
+      icon: "🚐",
+      color: "bg-purple-50 border-purple-200",
+      idealFor: "Group travel, weekend trips"
+    },
+    {
+      id: 4,
+      name: "Electric Vehicles",
+      description: "Eco-friendly options for environmentally conscious riders",
+      examples: ["Tesla Model 3", "Nissan Leaf", "Chevy Bolt"],
+      capacity: "2-5 passengers",
+      features: ["Zero emissions", "Quiet ride", "Advanced tech"],
+      icon: "⚡",
+      color: "bg-emerald-50 border-emerald-200",
+      idealFor: "Eco-conscious commuting"
+    },
+    {
+      id: 5,
+      name: "Luxury Vehicles",
+      description: "Premium comfort for special occasions or business travel",
+      examples: ["BMW 3 Series", "Mercedes C-Class", "Audi A4"],
+      capacity: "2-4 passengers",
+      features: ["Premium interior", "Advanced features", "Professional image"],
+      icon: "✨",
+      color: "bg-amber-50 border-amber-200",
+      idealFor: "Business meetings, special events"
+    },
+    {
+      id: 6,
+      name: "Vans & Minivans",
+      description: "Large group transportation for events and group trips",
+      examples: ["Honda Odyssey", "Toyota Sienna", "Ford Transit"],
+      capacity: "6-12 passengers",
+      features: ["Maximum capacity", "Flexible seating", "Group-friendly"],
+      icon: "🚌",
+      color: "bg-indigo-50 border-indigo-200",
+      idealFor: "Large groups, events"
+    }
+  ];
+
+  const safetyFeatures = [
+    {
+      title: "Vehicle Verification",
+      description: "All vehicles undergo safety and insurance verification",
+      icon: "🛡️"
+    },
+    {
+      title: "Driver Screening",
+      description: "Background checks and driving record verification for all drivers",
+      icon: "👤"
+    },
+    {
+      title: "Real-time Tracking",
+      description: "GPS tracking during rides for safety and coordination",
+      icon: "📍"
+    },
+    {
+      title: "Insurance Coverage",
+      description: "Additional insurance protection during rideshare trips",
+      icon: "🏥"
+    }
+  ];
+
+  const tips = [
+    {
+      category: "For Passengers",
+      tips: [
+        "Check the vehicle description before booking",
+        "Communicate any special needs (luggage, accessibility)",
+        "Confirm pickup location and time",
+        "Rate your experience to help the community"
+      ]
+    },
+    {
+      category: "For Drivers",
+      tips: [
+        "Keep your vehicle clean and well-maintained",
+        "Update your vehicle information if you change cars",
+        "Communicate about available features (AC, phone charging)",
+        "Be punctual and professional"
+      ]
+    }
+  ];
+
   return (
-    <>
-  <main class="container mx-auto py-8 px-4">
-    <h2 class="text-3xl font-bold mb-4">Our Vehicles</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="https://imgd.aeplcdn.com/664x374/cw/ec/22566/Toyota-Prius-Left-Front-Three-Quarter-90765.jpg?v=201711021421&q=80" alt="Car 1" class="w-full h-56 object-cover object-center"/>
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Toyota Prius</h3>
-          <p class="text-gray-700">Fuel-efficient hybrid car, perfect for city commuting.</p>
+    <div className="min-h-screen bg-gradient-subtle pt-20">
+      {/* Header */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
+            Vehicle Network
+          </h1>
+          <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-8">
+            Our diverse network of vehicles ensures you can find the perfect ride for any journey. 
+            From fuel-efficient compacts to spacious SUVs, our community offers reliable transportation options.
+          </p>
+          <div className="bg-white rounded-xl shadow-lg p-6 max-w-2xl mx-auto">
+            <div className="grid grid-cols-3 gap-4 text-center">
+              <div>
+                <div className="text-2xl font-bold text-primary-600">500+</div>
+                <div className="text-sm text-neutral-600">Active Vehicles</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-primary-600">15+</div>
+                <div className="text-sm text-neutral-600">Vehicle Types</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-primary-600">98%</div>
+                <div className="text-sm text-neutral-600">Satisfaction Rate</div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-  
-      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="https://imgd.aeplcdn.com/1920x1080/n/cw/ec/27074/civic-exterior-right-front-three-quarter-148155.jpeg?q=80&q=80" alt="Car 2" class="w-full h-56 object-cover object-center"/>
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Honda Civic</h3>
-          <p class="text-gray-700">Compact sedan with a smooth ride, ideal for long trips.</p>
-        </div>
-      </div>
+      </section>
 
-      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUWFRgWFRYYGRgaGhwcHBgcGh4eIx4eHBwcHhwaHBofIS4lHB4rHxwcJjgmKy8xNTU1GiQ7QDszPy40NTEBDAwMEA8QHhISHzQrJCs0NDQ0NDQ0NDQ0NDE0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIAJ8BPgMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAACBAMFBgEAB//EAEYQAAECAwUFBQYEAggGAwEAAAECEQADIQQSMUFRBWFxgZETIqGxwQYyQlLR8BRykuEV8SNTYoKissLSFjRUg5OjQ0SEM//EABgBAAMBAQAAAAAAAAAAAAAAAAABAgME/8QAIhEAAwEAAQUAAwEBAAAAAAAAAAERAiEDEjFBURNhcSIE/9oADAMBAAIRAxEAPwCjtKO9qDrTLk9NIjsyAaqqklrpDuwqajhz5w3bjeIKCAQMHL0vYa+VYCxFASSod40N0AE4EBXMmOSlAS7OxN4uXqC28geA6c4FCUqWVB0kJNGx1pph0iJMtT0U1896ubHxr4bonm0YgEMmrjq2G7fWJoCi2wI5EefJw8TS2KA2PeqccKF8/wBojTMQQCzlNTqMsjSsNSp6UGtHFAcARm4NRWKT9CPWmV3EkUqplDKr15N1hcKclg7gAuHoa0q+LmmPOGrSohKUqGNwuGBqK0/TWuEcs0k30gVCnFcgzhXQkh40b5AestmQu6wCyHSEKU1AaZgFmqBrGgSBeuJZx7zCg3bozYWSsJSqgYAk1KsKHPWuTw3sxZk31li5au4kMNKk1wrFIUL7sY92MBY9opXevi6QWHBhnxeH0AKDgvA6OCfZRzsof7KPdlCAQ7GPdlD3ZR7sol0agj2UcKIe7KAVIiHSuBIo3wJlb4cNlMCbKYXI+BIy44ZcNmzHSANnVoYORwVMqAVJhsyVaGBMpekHIcCKpBgTJMPmzr0gTZV6Q4w4K8yoEyofNkXpHFWVYqacYIwqK8yoEohhZA+IHhXyiBc9I+/TGCMfABTHCIhXb0ZEcqnpj4QHbLV7qFHezed2KjFwTmAviFl3/iUhHFQPgz+MLTJyB700nclJI6qeHF9Dn0iwVOHP7yiCbbAMwNxofEiK2Zb5QwQtf5lsOgcQsrbDUQhCeAcw0kEZZqtSle6FHgCPQA9YBUtZrdA3qIHUd6KadteYfjVyYeTRAuaTUkk76w/HoFm+y5WUj3pqR+Wvg5HhC6rRJGcw8O74OIrCTANDrH2o2ltmAJQkjvZqYVPEUd34PAXEpZkmpqlhoAQTicW3OYG3SFOXNA4BL6JZQD4sQdKR2ROJSRUtVzVmY9anqY5dP2ZkXad9wkMMTiB1+mQiWaCoC8QHHiQ9frAypAV3ncu5NampHKnUwU43k0o4FHdvtsX1hN0Csk2U37woGJPhjliYYXKC6qNXLJGOFD1ENJLFIUkgNUtiFZgN9vBX00DjKuDu772Ay+sU2/IoTLDpKSX95geNUjfTKuHOvklb3XoASa4gEAh8M6fyhoEsVNg+fwl3DMa4VhFAc0xJPRyAHi8txMGWFis4ulZyGuBI40G+DtMxSyCPcAoBmz49PEUhJU8hNwNQMpnwcE44kYxPKnAIUjB2Y56McmL8KmNE5wIsLGVAM7itTi5q3AAw3KtCkF0lvvSFbIxQMaYPp905RPdjXMgi1s21zgsPvFD9PKLKVbJasFB9DQxmU0MERuxgeUM1gQDhHezjNWe2LQ90ggly+vnFtYdrpVRfdOuX7fvEPLQx/s492cLWnaktBIe8Wdhgdz4RCjbaM0qG/c7eVYmMY/2ce7OBk22Wv3Vg7s67oYpABB2ce7OJwAY9dhUUF+zjnZQzdjl2ChBe5FVtu3KkBJCXCqPdKmOQpufpF7diK0WRCxdWlw75jygoIxMza85fuhba0QPQwrMWs1WtCeJKz6HxjZL2BIPwEf31+pjP7f8AZ1RUOxv+7gzh3OYFMonWmjbCy3CnXMR8S1q3AADxrECrXLHwA/nUVeBhqV7JWpWKAnepY8g5hid7HLQgrWtFG7qXzLe8RTpCenKarPTsKhe1F/CyR/ZSB5iE51qWrFSjxJ8oktlmKA90ioGN4Fy1GAiWVse0rDplLYO5LJwxxaBc8lN5zxCuUTlC04KeGZspaVMqnX1hmx2W+l98aZXsx6mrwU/ZGOizGNALBw8YMWTeOkaUxM6uyliWNAfKOIWSMBF/arKyFl37qqNuMVUvZk3+rV1AyGUJtewzfQqX3ffCOFsz4P5xY/wmafg8R9YIbInfKkdIXdn6i436ZoVFJJAvd2hOF4Oka4AA8G3QoZSkhRFM3GgApoKh9adYpdqSl75r3k5Fz3S56mAEy+A5ISAAkAYCgSKAtRzyjk1fJAzYpl50EgF8KZB+eDZY6ORxcwGgq1Ltanc2DtCCpiUlg4wcvg2PjDa0JCTiwIrrj0q9N2UDnkQa5ijjpgcSHwGtYjEwu2FMMf2PPWIhKDXya1pkB6+jR42kJAJqdKHXHSp8eUV58AWE4f0alAm6pYSRWhSLzUwLdddUOyJcnu0zrlnWmutecR9isEqUpgz3h3nxADO7uG1fKhMMEKv3VXKhgXcDu/sabjnFoCFCxfCrpIBcpD8iS2DvDS03lpBJNAAxDBIBAavhAX1IBujIpURW9e0d2Th1Ecs0tCi6Qtw1GGmAyD1xwpwihGhs0m6C7Nu9TrBhnrhENmSVlTllUdBLXXGFc9dPOVSCHo/j5RtlqAeJAwjoL7ohFfWDSpt8UwDgfvpHa5xwmAYYLkvgzRxd0u7vuzzgHgwsYPi8JjI3bCCUtRxJJ1xar+cdKFKLAcywjqJLKBUoY4CFRQms6li8UzCliTQ1wqWi1/iiwS7KwZhShLt95RVld0EACpxID1NQ/SF+0OKvdo7aRLVK4Ro0bTU3eR4t6R2XtZNbzg1y3lhR8mimRNcB3zerAacYkXaEiiQKZ1PnET9FRFvL2mkhz8yQAA5YtU7gX6ROu2oGbnQRnDaN8DKQVKJAI3v974HkSSLmdthIYJFTrurlAStsHMJxZqgv4xVKkge8pzuGHM/SOKIowwL1r9IcQ4aBG0kHJXnHZu0ZYHzbm+sZ1SlqKReASSQ7Y8BnDhVcACQ6nAYVLPU7oTUGsorPa20Xghakd1ILJPHHDd4RRqmqb3Ekb1PFz7SXjLWDiaAcUqbnFWtDjJ2+YfWMk7zPZWm1EvgsqetKb3ZJAG4H/VDNhXfTeIarMA3qYjmg3ClRD8R9mJtioUJbUdzmD5Rtn7DPTbXLJVSx8p8Y4JQ+Q9IaIVqPvnHLp18P3jQgr9oIaUs3W7hq26KZO0V1ClLoWofONBtRB7FdX7pyir2bKulZUzKLjPyhaXHgef6InaP5/wBZgDbNy/1n6ReqWMgOh+kRl/sK+kSv4U/6I9q9FioBcvUEkkgKcXvddt8HIm3cBd0YNR8Hyf0G+DVZULBvLuFN4AtRrpcUrUkeMdnGUqUm4FJW5cEAAVfLXy4U5XGCUfIouSFzWUQE4kh3YerADNh4tzi6HBUAAEhDvUFvJjgMDCyJwZrocsXJqMmOuUdUskMFbwDjTEDrhugafBLUI0rIqaVbPD+UHPWFkEhgcAA2ADAnlXhEKlgeWGmPOPKWO6S2m/WuXSKJGp1oKAEg3QoFwBlVJB0cPjHLTajcCLzULsBiS4FMsKYUhe0SwQlQLu1Gdnb4nrniIWWtRpjV+oDdG8YeRsuLAs0SF3CSWWCSTdDsz0TWjtj0fs4Lt72DMHzoohL3VBw3i2amwbAlaC6FLL5JUAGbGY4D7npvjSWezy0XXUhBSGvGYCNPdDqJbB99Y0WXrwgUG9mICEMAzkmrmmFVcIOfOOS+X7iohc2qzguZz8JQPiV+kcm2+xn4lk6hkvyIIis9PSfgp6zAEKQq6ThQHHBsqZUgrbLlIDoUoq0xDdIiO17IAE3ZpAw76P8AbEJ2pZPkmHitPoBGnbqkvSOGa+McfxwiWZtSQmhkKpkpSxjhQHNxEX8Zkg/8sCfzT/rFdrFUdUoNWDs0m8fXTlAo24hPu2VP/uPmIP8A4k0syP0LPmmDtfoFpexkgah9W+2iNZSMn5+usQr9pHxkI5pbzERHb6Ff/WQd6RMGGhTTqDCXTZXehsJKmanrEiJIAN4P5eTxVp24lNShQ/MojzQIZTtdCgwBB0LNyOEJ9PXoFvJMUhNTiaNHACSwBfq8EgKNShR3GnkY7aZdpujskIFahjUaUz3k8jC7dD7snpVmq6iFGlMh9YNRCHIxO8x6Whb97uDRTD0ryjysaAq3vdT1OMQ3zyWpOCG8SaOTpDFnkMLy9MMuep4R7tUs3dGt1OPM4QK7ZXDHB/thCbb8DSS8jFxSg/ujXQbhkPrAqmBIZA/vHHrEK5xZzjxhc2gvgd2G7WIfCrG2dUpI7y1hNTjdZ3Oaga4x0WiX/XJ6o/2xX7dDyU75qfIxU2hDAPphnnnyjmWO5Ut9TtSUNKq1S/64dUf7YhVLlqqFk7wof6RGcMsFJcdRX9o1mwLGhVmlKILlOpHxHQxax28psF1O7ykJLko+ZZ/vKgEyUar/AFLi/wD4eitD+pX1jidnS3w/xK+sUm/rCr4imWiSE99Sgn+0tYG7GCTaJHz/APsX9YS9s7KlAQUjJWZOLamKHZtgQu+V3qE+6d5+kX+PuVbZP5J4SNZ20j5z+tf1gDMlfN/jX9Ypk7HlYhS/1D6R1OzEfNM43v2iPxL6w/L+isKL7VYua1GWDHHhBrDPQBScSHIIBx3CsOJWgDvJOLgg0Bd8dPpAqQCpgcQRyLnwKvCGn9IaEDOBxGIIiZCGCSzUpXr/ACj0uyBJKnOg5Bz5CFipV1iSLr0yD6HOKlcRD/YxOmpulwG3jF8uQ5+QXWgtRlBgS2WNH1oft4KUhamDPUVLsB9+UMWWQhTlRICVBk0AIFC9MWD8YjSjCCUtagkIxDuAdRpmDRoCz9490Pg9XcacYanrQjBDgZqOLpIBbIYdIiXtAhClMEmiQBmcRgK3QHpuispvwhPgZm2pYT2UsrYElbFRF4gOAwJwAfUxDYJayq8QSA9GWgOcLxWAVZ0DwMnZUtaElSy+5SaPVmY11i0sspEtISk7ySak6mOtcKEPljAkjRPhHFFAwb75R7tHwjyJT1LpSKqURhw1VoM4abFDypoSm9TQDU/QOOoGcWfstZQuYufOfsbOntFv8Sq3EcyH/utnFHaZ94uzABkjFkjJ9cSTmSTFzt+0fhbLJkFx2hK1j5lAhw+YR3EjKijGnhCgpa7SqbOK1l1KUVq4k91O4DLS5Ay1O51J8KCvADrFJL2ioFSjdKcN9MhqMa74A7XUE3WFABeT4F+UTQho2jl06xlJtuWsglZA/OQ/IemsSSGPevneSo5YjF+VYKwhoJhrrDNhIuJ1IvfqJV6xRWWYlD1ZwGckOz1q3hF1ZZjBKaOEilNGgbCDJVCk6yAuU906AUPEeoiaaonhxiOZNCEFVFEH3bzUYua45BhrDyxQGy29cshKnb5T6HT7pGism0goOOvodDGOmbVQsNcTuIWXHB6Ryw7QZRuGqSyk7sjvHlFtX+h4PoibQFBlAEGErZYCzoJIHwZjhrwx44RT2TaiSKFjmCYsEbYQPeLcj9Iy1n6is6aK+/dfOuB1GI/aJpUwlhdG6gfjexhi1TbPNqJiErb3nDHQLS4fwIyIrFT/ABBJUxKUtRx3kneCA7HlwEZaw/RtnafkfXjVSSdAfXCFptpIFRg7D0pAksXStFdGIgiqmI3sAThGPUy4WuRXaCybMhz/APL/AKVUiutBcJvNgB5uPOLG3v8Ah0UI/pTRmwCorVIKvhPSMseA2iO8WL/tjG29n0H8NKqfd3amMWqzLCSopUAM2LVjdezwP4aVg1wRb8CzwNGWcbxjhQfmiRQO6AF4EUHX9ogsy3tsSyA9GPp+8UeybxCiHPeOH5lRc+2iqpehrCfs011b5k/5lx0JzKM2q2iaUsvgekSFxr4esSzizpY7iB+9YgJV8u6p9BE2kyFPIVdDpWHpvr/aBo2HjDayVpHuoU4rgC9XYF0uBTKuTxVInF2KQWAengfvOGioXgWIJGDGjEMd2ES0kWmSIF9bVKkpDAHEguQ2Th25PR4K3yEgdwgpNRRruDu28mkKhd2ZeUCGyBxLnAv7pBZ45Mmqc5JxCRlhV2xbyi/D4JboUpZQCCDiD0f6tziOXNPf0UpSq41esAbReISsvhWrtkK4nCu+I7pC72nwkYBtGaKaTJJEl3vYUZ9Rg0avau1TZrFJQZKkBd26oIKFFRF5SitRZQNcNRwGNXaCQA4oOVGgPaSYomS73eyTd0qSVcDeoeAisqaUDiOmil25aheF8jBxNz0cD+eUD+LmfKv/AMsY6y2taCChRDZPRswRmN0aOx7XlrDLIQvfRJ3hWA4FucdCZlBtVrX/AFcw/wDeT6xEu0Kzs8w/9xBiGdtmQnBRX+UN4qbweEp+3z8CW4kH6ecOhB/8Sr/pp3JSD4CGJ23ZpTLQuROUlDhCZkuWtnIcJC0k1N3wjNTNrzlOL6m0FOT4+MQfi1/MXGb11xxgozVKt6mrZOXYWYmu668J/wAclOxs4cZfhbM78LsUItcxmvq6+sR3zi/WEBpx7QSgX7Bjr+Fs48aQS/aGUfeklt9nleioyxmmOm0q18BBwBp5O1ZCnCLLewe7ZUq/yrpDA2zKTjZ7vGzLHkuMtLtqwCAWGY1pE0raawXLnLE/enSADT/x+UcZaecucPJcRWjatnWkpUhAGoRaQet8jqIp07Y1Qf1D6RKnayM0q6D6w+BQXtdxICpcy+x9xUslx+ZSBhEuzJqHUtRShRcVJAILYJAoXHjE6doyzmRxSfR4NNtlH4xzBHmIEknQY7LnWVu9M72bFDf4qwU+12dh2ZQal78xGGTXVCFEz0HAoPAiDUhOYA3kCLETJtKflQfyzCPJccvJPwL/AFk+YMLKkyzlLO50wC7Cj+rHFocFRu4jRY5JP+kecAsoZisgZhSV/wClZ8oSmWJDd107wT5PGtl7Vs05KSuVKQsXAoCWCFG8zgEEvg+4nSs64GuTLKRLFQpQq/cX43VJSfGPIWse5aFtopN7wJjbTNhIWSUyUXcimWsD/KkCm+Ku0bCSpK7ktND70uchBSQz3wsrAo4Zoze8Pyi0tFDNtq0JKllC0hqMUEudzjfyjc+zm0ZcyzoKHYC6Q1UkAOlQyPm4OcY5exEq94pVoFWuWfBEqNV7NbP/AAyVoKUJvF2SoqqKF1lIGjADInOObrdvbwa47ryXRmjf+k/SPJmpfHlB344tdHjlqNoYz2zW6knf/uihsSCkuDi+IfE5Vod8XPtYe6j7+aKizKjt6eVrPJz70864GZKFhV4qKh8hdI/wrB8YlnT5j90ISNGUf38Y8hUcUqKfRy/RK6mvohJKcQwfk1ajXNo5NUHIzL9X0aucQyAACSpidx5DDrwGkHaVAvdYijuCCftsNwjna5NbwRGZSjEYP5CvnBqnIDpAq1SAMalnNWc65QnNtAUplEfvw4xGhYFTUv8Adc4tZIbJ2GO/TzfE4R5aSCGVRx9DygEpPvpBZiMRwIg5VlWQwSRxLAwwjOqTiGFaU4cONBFValkrUWdiw3AaaDdvjS2fY85TA0cULneS1Iz20rMZc1aFZKNdQag9DF4abFpCoVu8f2jq1gDN9IJJiFaLygkfyzJO6NSCPtCTToIm7KYKlCwNSgt1aNPsfZMxctS5JRKlpDmapN6YsO15KD7qHwAbnkVssi0LShM4TlqlpWEdndUUqBLJYkKUAC6aOMHJaJo4ZiXMehgyIYtKUqAWkDe2msQJikI6A2ceA3mBub4NjDAjOMdvR4oMcKTAAYj0CFHQ+EeC9xhAHBolrU91C1NjdSSz4OQKYHpERWN/SDlWop9xak8CR5QAEqWsYoWOKT9IjC94hhG0pwqJ83/yL8nj0+2zVpCVrWsAuLxJqxD13EwcgQuIiVaRpAWlbUgLPKvHvKCU5qPprA2BMm1kYROnaJpkRmlgeZABPOGrNYrGqnalSt7p/aJLR7Pi6VSlu2KTiIKwOy9oqIdXeHzNXnrCc21ArS5YA48QQ8LWa0KlqUlQooXVJO/OI1Saw1pvyPtXov7Ls5Su+iYEJBYrVMShIOPvEgnKiQo1FI3kyZdsgmC0d64gFfbBBUtKUoUsCbLKTeKTVSkk6Ax8uRNul7qTQYh/HGL6y+1S0y+x7RaJZ+BkrRi/uqSc8sIjSo04NTtszH/5kn/9Ugf5JZPSL7ZQUuUFFSi5PeUpaicMCsOQ+bJG7M4qfteaT/RqKR8xRJSTwuIBHXpFp7PWuaualKlrUWXiomjFWZ1boOEc/Vz/AJciNcP/AEbHspgwYjXD0ECJq0i67v8Amp41MSJsuAcE0LEncWxxjq7OsHvBKRRu8XOGBvNgcaxw3SN+Cr2jYO1ASt3GDEDXQb4TGxEpxvjm/oIvkqBO8flI5mPJILkoGFKHHHEbo0z1uplREPGWUo2Yhv8A+oT+ZgOrRwbJBwmp5/zrFx2SCMMtT6xEEywO6DjUU/y5cYtf9OyfxZKKz+z62orfnnuER/8ADL+/MDagAtux6xeo2iKpa6Mi6Q7Yhwqo4gR0WxIILgBi7AZu1C0Lu38HMFF/wxLob5IOeDdAYYs+wZCcQTvVXpQOYsrRbEMGKcsMR4nwgV2lCSFIYnjuxw7vICHeo/oTBEixSkYJDBsgKjEXsCeWUSJSgAm6TQUAq4/LueARa0lJoXoxY9coiRa0hIvM+NSOGgxhTb9BcjqlD4UtkSHOONbw+zFRtrYyp676FISQkJIYAFnYkpqCxaowAh82pJSQogZUc09MoFFqAfIZElnG8ACuPTfFZW8upBp5a5MnO2HPT8AWP7JCvA18IqDY19oEKSpBWpCQ4KfeLFnEfRZNqSFMwCauoEvuN0APFR7VThdlTEgnspiVEbgQQ3Ep8Y3xvbc0jLWcypmgs0hCp6FyJwQiWhSF2VYotJRduomBkkEACrFNcawNrsiApVoSkInXAhJVMF0IdhdcFiEuCa0yqxC3TpiLRLtJnGZIWkKCC15ZV7rkD3AggvqkhtH9pbVs85NoliRelpVdnJSWWL5otCvzUYAglhGsIp852+hCLQQhaVpWAq8n3Soulbf30k8+UUYlKL3QTWLXbkiXLniVJUpaJYuhSgAom8pagQC1Cq7vu5RFYNkCdeUZqUMQO8kl6OcMGh2BKV/YL+U/pV9I92MwZGLVfs6oKZM2UQR7zqHJmMJW+xrlKa8VpyWkljyxHOBNBGKm/wDZEeC17+v7x5FoXkpf6jFvZ9mT1pChOl1+EzHUOIAI8YdEVF9ehj3aL0PSLpWxLUz3kK3ApP8AmERjZVqzQkbz2Q8jBUEKntlfKekc7c6eEXCtl2kUuSydApH+4RCbDaf6lJ4KHouChCs/EboJNoMPmyT/APp1HgFnyJiI2dYxs8zor6GHQEVKvGNjsuxIssuRap6AtExQukpvpCXZvlSpu8XrgAMTGWXZTdUspKReCQFA4lKia0wujL4o+no2gmUvslmWZayE/h5gWQq6wQoJue9TItxeJbGIe0stUizzTNQiYTMl3bySUhBD9wmoBCim8C7jFxFHaZMyzKQVBSUrSFJSogqSD70tZHxBxixYjMED6EJCwsqWVkEXihSCsJQ4UCgEBiFh2ADcq4fb3YqlzFC0JXNEwKKUgi6l7hdzi68AAOJrCywZS7es4IExOBq8VnaAjGsWqF3rPXImKWS12oHGv1ikItphkM7jkpzC0mwLm3jJlTFpT7xSlSwn8xSGD6QkVj5R4+pi/wBh7StSUGXZ5gSHKriQHJLAklmGAqTD1r4CKyRZ3IuBSzogFXgl42nsxYFIdcxJQrC4QxCTdqQ7pJINDo+cR2OyWhaXtE2Y7nuJWwalTd35PDqZITRIDVy9cXjHeXrLReddrpYWvaiEqUo64sRU5YN104QhM24PiYpOYNeWZqREK5KHqkY6u3LrHpkpBHeQk0YuHDaEEccYxXQNH1Tg2tJ1ILfNeGJaqs4XTt9QWAEi7q+gxfDWJk2SQCf6NO6jeEdMmWQwSgfbxa6SIer7Jf4wgd4FJp7uZY9YdlbSDOkXjneVRsmo/wBmK+4hmATlu54RIJKeHIebwPpZflAt6R3vOGQODB+G7OCW+aQ7uDprQJr+0CieC7EijYJ9G0jhWr5xzT9mLEGb5GGdKti9WNY8hCiHo+9m+se74FFAngfrwhdapgqpiBmBTgQMvGhgETdoRiUvuI10x8Y4pVQ6QWzJA45cOkLGYoP3eNfKJVJUcA2934OWf7MOASC0CrAJ/ZhESp2dXfQef3hHpktfHj/LCAlINCAHxq7dVA1wgA9MtKyMTz/nTpCtpUpSClTsQxBHrD01CszvZx5QIQxx6EHDnAMorBtZVnBlzkJmS/gUpJJQQSQUkEFJcktUHSJ53tXZ5V9dlQsTpj35ilnN3ASAABXR98W6iCKhPMaxCqxoNbqfDlFLRLRgkzCSS7qOJhiXOWAySQNwjZLsKBlX8ogPwgOY4NBUHJjylZxKusB2St8bM2Thww84H8Lu5Uh1C5Md2Z0jqVKGZjWfhRoByiNVlSchDAzYtCx8Rg/xi/mPjF6qwI0ECdmo+WACoRtSaPjPUwadsTh8ZixVs1OQERK2UMhBAouNuzaVFNw+kSp9oZmYSeXlHjsmAOyxvhRBSPaG2FTUXFpGIL8H+pjXTLcifZ5E5EpS7RJQElV0lKFkhKVqA94m4FJBzJFThkjsvfE1htE+zKJlld1QKVBOJSoMpOigdDoNIcA+gyvay0KnGzpUCuWgLBIoshIStDAZguzVOj0xntP+FSntZCVoXaGK5RqEAG8VIW/eQpV0j8pLkEQx/wAUyEpJTZWmEB5l1RVRqhS1G67B8qmlYy9ttq7RNVMWXJLs7+MIBmUu7KD51bxaEbUEqUVITcB+EFxy04ROoKVkYJNlMOAJJs2pjRbJ2kmUGCAMKh3LZkv+0Vv4YiJESYIFNInb6TRlcy+ETJ2qg6/f34xnESTEiEnTCF2oO40ht6Dn98IIT0HMHm3OM4CcT5xNLV9j6aQdoUvyEnDDR/KB7OjgAjr4xUpXBomq1MKDpYiSHoBg1PrBIlCrHr9YRRalDHziT8SDiNcTCjConM1BD3D901MAZickq4ejtCiQpWIGFOANfH7MTIkrZjnwzbN6ZQQdCWvQ7/Tf95QImqqb17mfTHjvj34W7VQeju+9o7dYuzZDDdu3wCJU2lWSSRrXqH5Rwz/7IBxck68ft4jBVVi335Z848uWpu9V6jDhhBACAB+MndXnn65wyUDGrtrj4tCATperXKC7wpV8TWCDGRISWunqCKl90EJas2LF6n71z1hQzi1Wc4GvMNzgpUw4M9WybxggEyikHAdceGsGFBTsHOg+sLiYGBA4VO7KkeD4kcs/NoIFGMDUdK5acfOIys5DoQKnUj7xgb4ViSMKN08vCCTJaqRq5dqvpnAAd/IggHTliOkdW1Xzr4twERKIxJHSOy1EtQEk+WEABqBZqxwNgRyIfCPKoQLtdx+90dKVvpuoa7zSkAHChOjvk7awIlp+XDea8ucSFCmqePh6GOAXvIY9cdG6QACqzpyHQ+FXiNNlfMvxH7QxMl0JfOhrl9/eQqQqg4Z7n4YN1grCC34c68qFmzfLGO/h3wObYH7yia6zjKmZwOnMR1Ac918QcWoPLpDooQGymjCucAqzEZD7+kN1xdi7NvOAfXfvgV64eOWdPthCrCCq7KRiOp8tYBdn/sg8vVvukPgE46bvMcIIoSAxDN9tSHQhVpkj5fBo8ZCdB4xZLSrLDj6cN8eTLWQ7UFSHGHGCihXGzI/kPt4JMhG6GhKqf5ajKPFAepywboH6dIKEFF2UDMdYBUkaU19cofEoGtA7nPP+cdNmzbdjgaQUIVxlpfGvEc4II1HPhuhv8OHcgs7UIy/mPGOGzpegIwz6esPuCCl1Opy/bnjHgl8Dhrx8/wB4cNlBo6uR/caQC7MzOSM2x5BjB3IILql1qU838KUgFS1NQPw58om7NRqzjWj5748hRyB6/U8YYj//2Q==" alt="Car 3" class="w-full h-56 object-cover object-center"/>
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Chevrolet Suburban</h3>
-          <p class="text-gray-700">Spacious SUV with ample seating and cargo space.</p>
+      {/* Vehicle Categories */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-neutral-900 mb-4">Vehicle Categories</h2>
+            <p className="text-lg text-neutral-600">Choose the right vehicle type for your needs</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {vehicleCategories.map((category) => (
+              <div key={category.id} className={`rounded-xl border-2 ${category.color} p-6 hover:shadow-lg transition-shadow duration-300`}>
+                <div className="text-center mb-4">
+                  <div className="text-4xl mb-2">{category.icon}</div>
+                  <h3 className="text-xl font-semibold text-neutral-900">{category.name}</h3>
+                  <p className="text-neutral-600 text-sm mt-1">{category.description}</p>
+                </div>
+                
+                <div className="space-y-3">
+                  <div>
+                    <div className="text-sm font-medium text-neutral-700 mb-1">Capacity</div>
+                    <div className="text-sm text-neutral-600">{category.capacity}</div>
+                  </div>
+                  
+                  <div>
+                    <div className="text-sm font-medium text-neutral-700 mb-1">Popular Models</div>
+                    <div className="text-sm text-neutral-600">{category.examples.join(", ")}</div>
+                  </div>
+                  
+                  <div>
+                    <div className="text-sm font-medium text-neutral-700 mb-1">Key Features</div>
+                    <div className="space-y-1">
+                      {category.features.map((feature, idx) => (
+                        <div key={idx} className="flex items-center text-sm text-neutral-600">
+                          <span className="text-success-500 mr-2 text-xs">✓</span>
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <div className="text-sm font-medium text-neutral-700 mb-1">Ideal For</div>
+                    <div className="text-sm text-neutral-600">{category.idealFor}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* Safety & Standards */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-neutral-900 mb-4">Safety & Standards</h2>
+            <p className="text-lg text-neutral-600">Every vehicle in our network meets strict safety requirements</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {safetyFeatures.map((feature, index) => (
+              <div key={index} className="text-center bg-white rounded-xl p-6 shadow-lg">
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-lg font-semibold text-neutral-900 mb-2">{feature.title}</h3>
+                <p className="text-neutral-600 text-sm">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Vehicle Requirements */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-neutral-900 mb-6">Vehicle Requirements</h2>
+              <p className="text-lg text-neutral-600 mb-6">
+                To ensure safety and reliability, all vehicles must meet our quality standards.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-success-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-sm">✓</span>
+                  </div>
+                  <span className="text-neutral-700">Model year 2010 or newer</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-success-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-sm">✓</span>
+                  </div>
+                  <span className="text-neutral-700">Valid registration and insurance</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-success-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-sm">✓</span>
+                  </div>
+                  <span className="text-neutral-700">Regular maintenance and inspection</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-success-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-sm">✓</span>
+                  </div>
+                  <span className="text-neutral-700">Clean interior and exterior</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-success-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-sm">✓</span>
+                  </div>
+                  <span className="text-neutral-700">Working safety features (seatbelts, airbags)</span>
+                </div>
+              </div>
+            </div>
+            <div className="bg-gradient-primary rounded-2xl p-8 text-white text-center">
+              <div className="text-6xl mb-6">🚗</div>
+              <h3 className="text-2xl font-bold mb-4">Want to Share Your Vehicle?</h3>
+              <p className="text-lg mb-6">
+                Join our network of drivers and start earning while helping your community commute.
+              </p>
+              <button className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-200">
+                Register Your Vehicle
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tips Section */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-neutral-900 mb-4">Tips for Success</h2>
+            <p className="text-lg text-neutral-600">Making the most of our vehicle network</p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {tips.map((section, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6">
+                <h3 className="text-xl font-semibold text-neutral-900 mb-4">{section.category}</h3>
+                <div className="space-y-3">
+                  {section.tips.map((tip, tipIndex) => (
+                    <div key={tipIndex} className="flex items-start space-x-3">
+                      <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center mt-0.5">
+                        <span className="text-primary-600 text-sm">💡</span>
+                      </div>
+                      <span className="text-neutral-600">{tip}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 bg-gradient-primary">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Find Your Ride?</h2>
+          <p className="text-xl text-white/90 mb-8">
+            Browse available vehicles in your area and start carpooling today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-primary-600 px-8 py-4 rounded-xl text-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              Find a Ride
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white hover:text-primary-600 transition-all duration-300">
+              Register Your Vehicle
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
-  </main>
-  </>
+  );
+};
 
-  )
-}
-
-export default Vehicles
+export default Vehicles;
